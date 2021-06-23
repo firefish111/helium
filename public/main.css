@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:ital,wght@0,400;0,700;1,400&display=swap");
+body {
+  --fonts: "Lexend";
+  font-family: var(--fonts);
+  color: black;
+  background: white;
+  text-align: center;
+  --yes: #0fbf4dfd;
+  --prismic: #5bb49855;
+  --no: #d11c0f;
+  --misc: #e9c810;
+}
+
+a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+
+h1.title {
+  font-size: 50px;
+  margin: 34px 0px;
+  padding-top: 6px;
+}
+h1 > span.highl {
+  color: var(--prismic) !important;
+  text-shadow: 0px 0px 6px var(--prismic);
+}
+
+button {
+  font-size: 17px;
+  padding: 15px 32px;
+  border: none;
+  color: black;
+  text-align: center;
+  border-radius: 50px;
+  transition: background 215ms !important;
+  margin-bottom: 15px;
+  font-family: var(--fonts) !important;
+}
+button,
+button > a {
+  text-decoration: none;
+  background: #aaa !important;
+}
+button:active {
+  background: var(--yes);
+}
+button.help {
+  cursor: help;
+}
+
+div.CodeMirror {
+  width: 60vw;
+  margin: auto;
+  background: #272822 !important;
+  padding: 5px;
+}
+
+form > div.sect > * {
+  font-weight: 700;
+  margin-right: 10px;
+  font-family: var(--fonts);
+}
+form > div.sect > input {
+  border: none;
+  border-radius: 5px;
+  padding: 1px 2px;
+  color: black;
+  background: #ccc;
+}
+form > div.sect > input:not([type="text"]) {
+  width: 50px;
+}
+form > div.sect > input label,
+form > div.sect > input {
+  height: 25px;
+  padding: 0px 5px;
+}
+form > div.sect > input pre,
+form > div.sect > input:focus {
+  border: 1px solid var(--prismic);
+}
+form > div.sect#top {
+  margin: 15px auto;
+  width: 60vw;
+}
+form > div.sect#head {
+  text-align: left;
+  margin-left: 10px;
+}
+form > div.sect#head label#enter {
+  font-size: 1.8em !important;
+}
+
+div.error > div {
+  font-weight: 700;
+}
+div.error > div#success {
+  color: var(--yes) !important;
+}
+div.error > div#failure {
+  color: var(--no) !important;
+}
+div.error > div#info {
+  color: var(--misc) !important;
+}
+div.post {
+  margin: auto;
+  width: 60%;
+  border: 3px solid black;
+  padding: 10px;
+}
+div.post > [class],
+div.post div.con > [class] {
+  text-align: left;
+}
+div.post > div.title {
+  font-size: 25px;
+  text-align: center !important;
+}
+div.post > div.content {
+  margin-top: 10px;
+  color: #aaa !important;
+  text-shadow: 0px 0px 2px #aaa;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+div#head > div.con,
+div.post > div.con {
+  display: flex;
+  flex-flow: row wrap;
+}
+div#head > div.con > div.avatar,
+div#head > div.con > div.avatar > svg,
+div.post > div.con > div.avatar,
+div.post > div.con > div.avatar > svg {
+  width: 20px;
+  height: 20px;
+}
+div#head > div.con > div.author,
+div.post > div.con > div.author {
+  padding-left: 7px;
+  color: var(--yes) !important;
+}
+div#head > div.con > div.timestamp,
+div.post > div.con > div.timestamp {
+  margin-left: auto;
+  color: #aaa;
+  text-shadow: 0px 0px 2px #aaa;
+  font-size: 12px;
+}
+
+[class*="CodeMirror"] {
+  text-align: left !important;
+  font-family: var(--fonts) !important;
+  font-size: 15px;
+}
+
+pre,
+code {
+  color: var(--no);
+  background: #272822;
+}
